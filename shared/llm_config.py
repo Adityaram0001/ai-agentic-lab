@@ -14,7 +14,7 @@ AZURE_DEPLOYMENT_NAME = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME")
 if not AZURE_API_KEY:
     print("Warning: AZURE_OPENAI_API_KEY is not set. Please check your .env file.")
 
-def get_langchain_llm(reasoning_effort="low", temperature=0.7):
+def get_langchain_llm(reasoning_effort="low", temperature=1):
     """
     Returns an AzureChatOpenAI instance configured for LangChain/LangGraph.
     Dynamically passes the reasoning_effort.
@@ -41,7 +41,7 @@ def get_openai_client():
         api_version=AZURE_API_VERSION
     )
 
-def get_crewai_llm(reasoning_effort="low", temperature=0.7):
+def get_crewai_llm(reasoning_effort="low", temperature=1):
     """
     Returns an LLM instance for CrewAI.
     """

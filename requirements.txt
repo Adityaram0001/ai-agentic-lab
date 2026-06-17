@@ -4,3 +4,9 @@ langchain
 langchain-openai
 crewai
 autogen
+langchain-community
+chromadb
+pypdf
+sentence-transformers
+langchain-chroma
+langchain-huggingface
